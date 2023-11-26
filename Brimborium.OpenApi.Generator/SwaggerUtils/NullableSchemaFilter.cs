@@ -15,11 +15,11 @@ public class NullableSchemaFilter : ISchemaFilter {
                 var namePropertyCamelCase = System.Text.Json.JsonNamingPolicy.CamelCase.ConvertName(typeProperty.Name);
 
                 if (schema.Properties.TryGetValue(namePropertyCamelCase, out var schemaProperty)) {
-                    applyPropertyInfo(schemaProperty, typeProperty);
+                    ApplyPropertyInfo(schemaProperty, typeProperty);
                 }
             }
         } else if (context.MemberInfo is PropertyInfo propertyInfo) {
-            applyPropertyInfo(schema, propertyInfo);
+            ApplyPropertyInfo(schema, propertyInfo);
         }
         /*
         else if (context.MemberInfo is not null) {
@@ -29,7 +29,7 @@ public class NullableSchemaFilter : ISchemaFilter {
         */
     }
 
-    private void applyPropertyInfo(OpenApiSchema schema, PropertyInfo propertyInfo) {
+    private void ApplyPropertyInfo(OpenApiSchema schema, PropertyInfo propertyInfo) {
         if (schema.Nullable) {
             if (Nullable.GetUnderlyingType(propertyInfo.PropertyType) is not null) {
 

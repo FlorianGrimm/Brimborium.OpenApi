@@ -11,7 +11,7 @@ public class MimeTypeJsonOperationFilter : IOperationFilter {
                 foreach (var key in keys) {
                     if (key == mimetype) {
                     } else {
-                        content.Remove(key);
+                        _ = content.Remove(key);
                     }
                 }
             }
@@ -24,7 +24,7 @@ public class MimeTypeJsonOperationFilter : IOperationFilter {
                     foreach (var key in keys) {
                         if (key == mimetype) {
                         } else {
-                            content.Remove(key);
+                            _ = content.Remove(key);
                         }
                     }
                 }

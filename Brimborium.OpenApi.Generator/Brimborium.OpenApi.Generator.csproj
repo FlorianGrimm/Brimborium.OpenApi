@@ -11,10 +11,16 @@
     <Compile Remove="NgOpenApi\Content.cs" />
     <Compile Remove="NgOpenApi\GenType.cs" />
     <Compile Remove="NgOpenApi\GenUtilities.cs" />
+    <Compile Remove="NgOpenApi\Globals.cs" />
+    <Compile Remove="NgOpenApi\IImportable.cs" />
+    <Compile Remove="NgOpenApi\Import.cs" />
+    <Compile Remove="NgOpenApi\Imports.cs" />
     <Compile Remove="NgOpenApi\Model.cs" />
     <Compile Remove="NgOpenApi\ModelIndex.cs" />
     <Compile Remove="NgOpenApi\NgOpenApiGen.cs" />
+    <Compile Remove="NgOpenApi\NgOpenApiGenerator.cs" />
     <Compile Remove="NgOpenApi\OperationVariant.cs" />
+    <Compile Remove="NgOpenApi\Options.cs" />
   </ItemGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
@@ -23,10 +29,16 @@
 	  <None Include="NgOpenApi\Content.cs" />
 	  <None Include="NgOpenApi\GenType.cs" />
 	  <None Include="NgOpenApi\GenUtilities.cs" />
+	  <None Include="NgOpenApi\IImportable.cs" />
+	  <None Include="NgOpenApi\Import.cs" />
+	  <None Include="NgOpenApi\Imports.cs" />
 	  <None Include="NgOpenApi\Model.cs" />
 	  <None Include="NgOpenApi\ModelIndex.cs" />
 	  <None Include="NgOpenApi\NgOpenApiGen.cs" />
+	  <None Include="NgOpenApi\NgOpenApiGenerator.cs" />
 	  <None Include="NgOpenApi\OperationVariant.cs" />
+      <None Include="NgOpenApi\Globals.cs" />
+      <None Include="NgOpenApi\Options.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Configuration" />
@@ -40,5 +52,4 @@
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" />
 		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
 	</ItemGroup>
-
 </Project>
